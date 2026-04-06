@@ -7,7 +7,7 @@ A full-stack billing web application built with **React JS**, **Node.js + Expres
 ## Project Structure
 
 ```
-logedge/
+billing_dashboard/
 ├── database.sql              ← Run this to set up local DB schema + seed data
 ├── README.md
 │
