@@ -47,7 +47,7 @@ const Master = () => {
                 <h2>{card.title}</h2>
                 <p>{card.description}</p>
                 <button className="master-card-btn">
-                  Manage {card.title} <FaPlus />
+                  <FaPlus />  Add {card.title} 
                 </button>
               </div>
             </div>
