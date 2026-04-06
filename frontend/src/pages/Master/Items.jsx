@@ -23,7 +23,7 @@ const Items = () => {
 
   const fetchItems = async () => {
     try {
-      const res = await axios.get('/api/items/');
+      const res = await axios.get('https://billing-dashboard-ztjc.onrender.com/api/items/');
       
       const itemsData = res.data.data || [];
       
