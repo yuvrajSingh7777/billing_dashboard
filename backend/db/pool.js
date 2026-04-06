@@ -24,7 +24,7 @@ const pool = new Pool(
       }
 );
 
-// Test connection
+
 pool.connect((err, client, release) => {
   if (err) {
     console.error("Could not connect to PostgreSQL:", err.message);
