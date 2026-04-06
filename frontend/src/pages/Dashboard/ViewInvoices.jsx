@@ -100,7 +100,11 @@ const ViewInvoices = () => {
 
             <tbody>
               {filteredInvoices.map((invoice) => (
-                <tr key={invoice.id}>
+                <tr key={invoice.id} onClick={() => {
+                  if (window.innerWidth <= 580) {
+                    viewInvoiceDetails(invoice.invoice_id);
+                  }
+                }}>
                   <td className="invoice-id">{invoice.invoice_id}</td>
                   <td>{invoice.customer_name}</td>
                   
