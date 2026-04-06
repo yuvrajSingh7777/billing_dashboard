@@ -109,7 +109,7 @@ const ViewInvoices = () => {
                       {invoice.item_names && invoice.item_names.length > 0 ? (
                         invoice.item_names.map((item, idx) => (
                           <span key={idx} className="item-name-badge">
-                            {item}
+                            {item}{idx !== invoice.item_names.length - 1 ? ', ' : ''}
                           </span>
                         ))
                       ) : (
