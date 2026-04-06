@@ -26,7 +26,7 @@ const AddItem = ({ onSuccess, onClose }) => {
     setLoading(true);
 
     try {
-      await axios.post('/api/items/', {
+      await axios.post('https://billing-dashboard-ztjc.onrender.com/api/items/', {
         name: formData.name,
         selling_price: parseFloat(formData.selling_price), 
         status: formData.status
