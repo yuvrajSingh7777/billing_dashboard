@@ -81,7 +81,7 @@ const Customers = () => {
           <FaSearch />
           <input
             type="text"
-            placeholder="Search by name or customer ID..."
+            placeholder="Search by name"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
