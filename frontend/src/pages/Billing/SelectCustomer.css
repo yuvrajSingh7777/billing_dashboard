@@ -1,0 +1,96 @@
+.sc-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.sc-modal {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  width: 520px;
+  max-width: 95vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 2px solid #4a90d9;
+}
+
+.sc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sc-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1a1a2e;
+}
+
+
+
+.sc-cancel-btn:hover {
+  background-color: #fff0f0;
+}
+
+.sc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sc-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.sc-card:hover:not(.sc-card--inactive) {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border-color: #4a90d9;
+}
+
+.sc-card--inactive {
+  background-color: #f0f0f0;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.sc-card-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a2e;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sc-badge {
+  align-self: flex-start;
+  border-radius: 4px;
+  font-size: 11px;
+  padding: 2px 8px;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.sc-badge--active {
+  background-color: #e6f9ee;
+  color: #1a7a3c;
+}
+
+.sc-badge--inactive {
+  background-color: #fdecea;
+  color: #c0392b;
+}

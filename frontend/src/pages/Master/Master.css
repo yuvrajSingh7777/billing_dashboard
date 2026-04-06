@@ -1,0 +1,110 @@
+.master {
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.master-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.master-header h1 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.master-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+}
+
+.master-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.master-card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.master-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.master-card:hover::before {
+  transform: scaleX(1);
+}
+
+.master-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.master-card-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.master-card-content h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.master-card-content p {
+  font-size: 14px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.master-card-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.master-card-btn:hover {
+  background: white;
+  color: #667eea;
+}
+
+@media (max-width: 768px) {
+  .master-cards {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  
+  .master-card {
+    padding: 30px;
+  }
+}

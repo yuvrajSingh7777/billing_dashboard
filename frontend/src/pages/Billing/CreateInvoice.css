@@ -1,0 +1,120 @@
+.ci-page {
+  padding: 24px 32px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1a1a2e;
+  max-width: 900px;
+}
+
+.ci-billing-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ci-loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #555;
+}
+
+.ci-section {
+  border: 2px solid #4a90d9;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.ci-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+
+.ci-section-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a2e;
+}
+
+.ci-invoice-id {
+  font-size: 13px;
+  color: #444;
+  font-weight: 500;
+}
+
+.ci-customer-body {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #fff;
+}
+
+.ci-info-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.ci-info-key {
+  min-width: 70px;
+  color: #444;
+}
+
+.ci-info-colon {
+  color: #444;
+}
+
+.ci-items-body {
+  background-color: #fff;
+}
+
+.ci-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.ci-th {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+.ci-th-left {
+  text-align: left;
+}
+
+.ci-th-center {
+  text-align: center;
+}
+
+.ci-th-right {
+  text-align: right;
+}
+
+.ci-tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ci-td {
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #1a1a2e;
+}
+
+.ci-td-center {
+  text-align: center;
+}
+
+.ci-td-right {
+  text-align: right;
+}
