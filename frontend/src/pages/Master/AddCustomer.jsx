@@ -25,6 +25,14 @@ const AddCustomer = ({ onSuccess, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+  const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+
+    if (!panRegex.test(formData.pan_number.toUpperCase())) {
+      toast.error("Invalid PAN number");
+      return;
+    }
+    
     setLoading(true);
 
     try {
@@ -44,7 +52,7 @@ const AddCustomer = ({ onSuccess, onClose }) => {
       if (onClose) onClose();
 
     } catch (error) {
-      toast.error('Failed to add customer');
+      toast.error(error.response?.data?.message ||'Failed to add customer');
     } finally {
       setLoading(false);
     }
