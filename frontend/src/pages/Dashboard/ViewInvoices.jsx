@@ -23,7 +23,7 @@ const ViewInvoices = () => {
 
   const fetchInvoices = async () => {
     try {
-      const response = await axios.get('/api/invoices/');
+      const response = await axios.get('https://billing-dashboard-ztjc.onrender.com/api/invoices/');
       
       const invoicesData = response.data.data || [];
       
@@ -54,7 +54,7 @@ const ViewInvoices = () => {
 
   const viewInvoiceDetails = async (invoiceId) => {
     try {
-      const response = await axios.get(`/api/invoices/${invoiceId}`);
+      const response = await axios.get(`https://billing-dashboard-ztjc.onrender.com/api/invoices/${invoiceId}`);
       
       const invoiceData = response.data.data;
       
