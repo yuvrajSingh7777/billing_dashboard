@@ -36,7 +36,7 @@ const AddCustomer = ({ onSuccess, onClose }) => {
         status: formData.status
       };
 
-      await axios.post('/api/customers/', payload);
+      await axios.post('https://billing-dashboard-ztjc.onrender.com/api/customers/', payload);
 
       toast.success('Customer added successfully');
 
