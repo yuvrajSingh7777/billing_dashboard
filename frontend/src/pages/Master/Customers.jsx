@@ -25,7 +25,7 @@ const Customers = () => {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get('/api/customers/');
+      const response = await axios.get('https://billing-dashboard-ztjc.onrender.com/api/customers/');
       
       const customersData = response.data.data || [];
       
