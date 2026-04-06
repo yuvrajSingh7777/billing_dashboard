@@ -18,7 +18,7 @@ const AddItem = ({ isOpen, onClose, onAdd }) => {
   const fetchItems = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('/api/items/');
+      const response = await axios.get('https://billing-dashboard-ztjc.onrender.com/api/items/');
       const itemsData = response.data.data || [];
       
       const activeItems = itemsData.filter(item => item.status === 'Active');
