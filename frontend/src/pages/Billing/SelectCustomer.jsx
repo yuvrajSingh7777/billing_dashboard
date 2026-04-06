@@ -18,9 +18,8 @@ const SelectCustomer = ({ isOpen, onClose, onSelect }) => {
     try {
       const response = await axios.get('https://billing-dashboard-ztjc.onrender.com/api/customers/');
       const customersData = response.data.data || [];
-      
-      const activeCustomers = customersData.filter(c => c.status === 'Active');
-      setCustomers(activeCustomers);
+
+      setCustomers(customersData); 
     } catch (error) {
       console.error('Fetch customers error:', error);
       toast.error('Failed to fetch customers');
@@ -36,23 +35,29 @@ const SelectCustomer = ({ isOpen, onClose, onSelect }) => {
       <div className="sc-modal">
         <div className="sc-header">
           <h2 className="sc-title">Select Customer</h2>
-          <button className="btn btn-secondary" onClick={onClose}>Cancel</button>
+          <button className="btn btn-secondary" onClick={onClose}>
+            Cancel
+          </button>
         </div>
 
         <div className="sc-grid">
           {loading ? (
             <div className="sc-loading">Loading customers...</div>
           ) : customers.length === 0 ? (
-            <div className="sc-empty">No active customers found</div>
+            <div className="sc-empty">No customers found</div>
           ) : (
             customers.map(customer => {
               const isActive = customer.status === 'Active';
+
               return (
                 <div
                   key={customer.id}
                   className={`sc-card ${!isActive ? 'sc-card--inactive' : ''}`}
                   onClick={() => {
-                    if (!isActive) return;
+                    if (!isActive) {
+                      toast.error('Inactive customer cannot be added'); 
+                      return;
+                    }
                     onSelect(customer);
                     onClose();
                   }}
@@ -60,7 +65,14 @@ const SelectCustomer = ({ isOpen, onClose, onSelect }) => {
                   <div className="sc-card-info">
                     <span className="sc-card-name">{customer.name}</span>
                   </div>
-                  <span className={isActive ? 'sc-badge sc-badge--active' : 'sc-badge sc-badge--inactive'}>
+
+                  <span
+                    className={
+                      isActive
+                        ? 'sc-badge sc-badge--active'
+                        : 'sc-badge sc-badge--inactive'
+                    }
+                  >
                     {customer.status}
                   </span>
                 </div>
