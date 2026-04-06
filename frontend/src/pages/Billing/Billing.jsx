@@ -65,7 +65,7 @@ const Billing = () => {
         }))
       };
 
-      const response = await axios.post('/api/invoices/', payload);
+      const response = await axios.post('https://billing-dashboard-ztjc.onrender.com/api/invoices/', payload);
 
       if (response.data.success) {
         const createdInvoice = response.data.data;
